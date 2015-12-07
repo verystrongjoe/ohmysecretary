@@ -15,7 +15,7 @@ todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $firebaseArr
 	$scope.newTodo = '';
 	$scope.editedTodo = null;
 
-	$scope.userName = "verystorngjoe";
+	$scope.userName = "strongjoe";
 
 	$scope.$watch('todos', function () {
 		var total = 0;
@@ -38,7 +38,9 @@ todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $firebaseArr
 	}, true);
 
 	$scope.addTodo = function () {
-		var newTodo = $scope.newTodo.trim();
+		var newTodo = {};
+		newTodo.content = $scope.newTodo.content.trim();
+		newTodo.date = $scope.newTodo.date.trim();
 		if (!newTodo.length) {
 			return;
 		}
@@ -46,7 +48,8 @@ todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $firebaseArr
 			title: newTodo,
 			completed: false
 		});
-		$scope.newTodo = '';
+		$scope.newTodo.content = '';
+		$scope.newTodo.date = '';
 	};
 
 	$scope.editTodo = function (todo) {
