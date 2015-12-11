@@ -1,7 +1,9 @@
-node_modules/
 
 !node_modules/angular/angular.js
 !node_modules/angularfire/dist/angularfire.js
 !node_modules/todomvc-app-css/index.css
 !node_modules/todomvc-common/base.css
 !node_modules/todomvc-common/base.js	
+
+node_modules/
+
