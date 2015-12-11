@@ -1,7 +1,7 @@
 node_modules/angular/*
-!node_modules/angular/angular.js
-
 node_modules/angularfire/*
+
+!node_modules/angular/angular.js
 !node_modules/angularfire/dist/angularfire.js
 
 node_modules/todomvc-app-css/*
