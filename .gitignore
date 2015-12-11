@@ -1,8 +1,11 @@
+# Ignore everything under node_modules
+node_modules/*
 
-!node_modules/angular/angular.js
+# Exceptions the subfolders
+!node_modules/**/
+
+# Exceptions the files (since the parent folders are not ignored)
 !node_modules/angularfire/dist/angularfire.js
 !node_modules/todomvc-app-css/index.css
 !node_modules/todomvc-common/base.css
-!node_modules/todomvc-common/base.js	
-
-#node_modules/
+!node_modules/todomvc-common/base.js 
