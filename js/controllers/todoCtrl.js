@@ -38,9 +38,9 @@ todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $firebaseArr
 	}, true);
 
 	$scope.addTodo = function () {
-		var newTodo = {};
-		newTodo.content = $scope.newTodo.content.trim();
-		newTodo.date = $scope.newTodo.date.trim();
+		// var newTodo = {};
+		var newTodo = $scope.newTodo.content.trim();
+	//	newTodo.date = $scope.newTodo.date.trim();
 		if (!newTodo.length) {
 			return;
 		}
@@ -48,8 +48,8 @@ todomvc.controller('TodoCtrl', function TodoCtrl($scope, $location, $firebaseArr
 			title: newTodo,
 			completed: false
 		});
-		$scope.newTodo.content = '';
-		$scope.newTodo.date = '';
+		$scope.newTodo = '';
+		// $scope.newTodo = '';
 	};
 
 	$scope.editTodo = function (todo) {
